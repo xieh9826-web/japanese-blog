@@ -89,6 +89,7 @@ a:hover { color: var(--accent-light); }
   font-size: 1.25rem; font-weight: 700;
   letter-spacing: -0.02em;
 }
+.site-logo .logo-img { width: 32px; height: 32px; }
 .site-logo .logo-icon { font-size: 1.4rem; }
 
 .main-nav { display: flex; align-items: center; gap: 2px; }
@@ -176,6 +177,19 @@ a:hover { color: var(--accent-light); }
   margin-top: 0.5rem;
 }
 .hero-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem; }
+
+/* Hero slime */
+.hero-slime { margin-bottom: 1rem; }
+.hero-slime-img {
+  width: 80px; height: 80px;
+  filter: drop-shadow(0 0 20px var(--accent-glow));
+  animation: slimeBounce 3s ease-in-out infinite;
+}
+@keyframes slimeBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
 .hero-stats { display: flex; justify-content: center; gap: 3rem; }
 .stat { text-align: center; }
 .stat-num {
