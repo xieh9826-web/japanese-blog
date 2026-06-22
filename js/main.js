@@ -4,6 +4,19 @@
 
 // --- State ---
 let activeFilter = 'all';
+let currentView = 'featured';
+
+// --- View Switching ---
+function switchView(view) {
+  currentView = view;
+  // Update nav active state
+  document.querySelectorAll('.main-nav a[data-view]').forEach(a => {
+    a.classList.toggle('active', a.dataset.view === view);
+  });
+  // Update URL hash
+  window.location.hash = view;
+  renderNews();
+}
 
 // --- Tag translation helper ---
 function tagI18n(tag) {
@@ -26,12 +39,69 @@ function renderNews() {
   const today = new Date().toISOString().split('T')[0];
   const hotItems = [];
 
+  if (currentView === 'trending') {
+    // Trending view: collect all items, filter by heat >= 60, sort by heat desc
+    const allItems = [];
+    NEWS_DATA.forEach(dd => {
+      dd.items.forEach(item => {
+        if (activeFilter === 'all' || item.tags.includes(activeFilter)) {
+          allItems.push({ ...item, day: dd.day });
+        }
+      });
+    });
+    allItems.sort((a, b) => b.heat - a.heat);
+
+    if (allItems.length > 0) {
+      totalItems = allItems.length;
+      html += `<div class="timeline-day">
+        <div class="day-header">
+          <h2>🔥 ${currentLang === 'zh' ? '热门排行' : currentLang === 'ja' ? '人気ランキング' : 'Trending'}</h2>
+          <span class="day-count">${allItems.length} ${currentLang === 'en' ? 'items' : '件'}</span>
+        </div>
+        <div class="day-body">`;
+
+      allItems.forEach((item, idx) => {
+        const content = item[currentLang] || item.zh;
+        const heatColor = item.heat >= 90 ? '#ef4444' : item.heat >= 80 ? '#f59e0b' : '#22c55e';
+        const rank = idx + 1;
+        const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : `#${rank}`;
+
+        html += `<div class="news-card" onclick="window.open('${item.url}','_blank')">
+          <div class="card-main">
+            <div class="card-title">${medal} ${content.title}</div>
+            <div class="card-desc">${content.desc}</div>
+            <div class="card-meta">
+              <span class="card-source">${item.source}</span>
+              <span class="card-time">${item.day.slice(5)} ${item.time}</span>
+              <span class="card-tags">
+                ${item.tags.map(t => `<span class="card-tag ${t}">${tagI18n(t)}</span>`).join('')}
+              </span>
+            </div>
+          </div>
+          <div class="card-side">
+            <span class="card-heat" style="color:${heatColor}">${item.heat}</span>
+            <span class="card-heat-label">${currentLang === 'en' ? 'heat' : '热度'}</span>
+          </div>
+        </div>`;
+      });
+      html += `</div></div>`;
+    }
+    timeline.innerHTML = html;
+    document.getElementById('todayCount').textContent = todayCount;
+    document.getElementById('totalArticles').textContent = totalItems;
+    renderHotItems(hotItems);
+    return;
+  }
+
+  // featured / daily view
   NEWS_DATA.forEach((dayData) => {
     const dayStr = dayData.day;
-    const items = dayData.items.filter(item => {
+    let items = dayData.items.filter(item => {
       if (activeFilter === 'all') return true;
       return item.tags.includes(activeFilter);
     });
+
+    if (currentView === 'daily' && dayStr !== today) return;
     if (items.length === 0) return;
     totalItems += items.length;
     if (dayStr === today) todayCount += items.length;
@@ -177,6 +247,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initFilters();
   initMobileNav();
   initScrollTop();
-  renderNews();
+
+  // Check URL hash for initial view
+  const hash = window.location.hash.replace('#', '');
+  if (['featured', 'trending', 'daily'].includes(hash)) {
+    switchView(hash);
+  } else {
+    renderNews();
+  }
+
   setTimeout(initSearch, 100);
 });
