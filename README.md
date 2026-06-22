@@ -1,31 +1,25 @@
-# 刻々 (Kokukoku) — 日系ブログ
+# 🧪 AISlime — AI 前沿动态聚合
 
-和風モダンな個人ブログサイト。日々の思索と創造を綴ります。
+每日精选全球 AI 行业最新动态，支持中文/日本語/English 切换。
 
-## 特徴
+## 功能
 
-- 🎋 和風モダンデザイン（日本の伝統色を使用）
-- 📱 レスポンシブ対応
-- 🎨 CSS Variables による統一されたカラーパレット
-- ✨ フェードインアニメーション
-- 🏷️ タグ・カテゴリー分類
-- 🌐 GitHub Pages で公開
+- 🌐 **多语言** — 中/日/英 即时切换
+- 🌓 **深色/浅色主题** — 跟随系统或手动切换
+- 🔥 **热度追踪** — 基于多维度热度评分
+- 📱 **响应式** — 桌面 & 移动端适配
+- 🔍 **搜索过滤** — 按分类和关键词筛选
 
-## 技術スタック
+## 技术栈
 
-- HTML5 / CSS3 / JavaScript (Vanilla)
-- Google Fonts: Noto Sans JP, Noto Serif JP, Zen Old Mincho
-- アイコン: Unicode / Emoji
+- HTML5 / CSS3 (CSS Variables + Flexbox/Grid)
+- Vanilla JavaScript (i18n, Theme, Filter)
+- GitHub Pages
 
-## ローカルでの実行
+## 本地运行
 
 ```bash
-# 静的ファイルなので、任意のHTTPサーバーで開くだけ
+cd ~/japanese-blog
 python3 -m http.server 8000
-# → http://localhost:8000 で表示
+# → http://localhost:8000
 ```
-
-## デプロイ
-
-GitHub Pages にデプロイされています。
-`main` ブランチにプッシュすると自動的に反映されます。
