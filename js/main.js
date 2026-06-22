@@ -1,192 +1,182 @@
-/* ============================================================
-   日系ブログ — JavaScript
-   Japanese Blog — Main JavaScript
-   ============================================================ */
+// ============================================================
+// AISlime — Main JavaScript
+// ============================================================
 
-// --- Blog posts data ---
-const blogPosts = [
-  {
-    id: 'sakura',
-    title: '桜と静寂 — 春の訪れを待つ京都の小さな寺で',
-    excerpt: '三月のある朝、まだ冷え込む空気の中、北山の小さな寺を訪れた。静まり返った境内で感じた、春の息吹と安らぎのひととき。',
-    category: '文化・エッセイ',
-    date: '2026年3月15日',
-    readTime: '5分',
-    url: 'posts/桜と静寂.html',
-    color: 'linear-gradient(135deg, #2d4a22, #6b7b3a, #8fa35a)',
-    emoji: '🎋',
-    tags: ['#エッセイ', '#京都', '#春']
-  },
-  {
-    id: 'cafe',
-    title: '喫茶店とエンジニア — コードを書くのに最適な場所',
-    excerpt: 'エンジニアにとって作業環境は命。東京の老舗喫茶店で見つけた、最高の集中空間と「カフェ効果」について。',
-    category: 'テクノロジー',
-    date: '2026年2月28日',
-    readTime: '4分',
-    url: 'posts/喫茶店とエンジニア.html',
-    color: 'linear-gradient(135deg, #4a3520, #6b4c2e, #8b6914)',
-    emoji: '☕',
-    tags: ['#エッセイ', '#テクノロジー']
-  },
-  {
-    id: 'books',
-    title: '本と旅 — 移動中に読む一冊の贅沢',
-    excerpt: '新幹線の中での読書時間は、旅の最大の楽しみの一つ。旅に合う本の選び方と、紙 vs 電子書籍の話。',
-    category: '読書録',
-    date: '2026年2月10日',
-    readTime: '4分',
-    url: 'posts/本と旅.html',
-    color: 'linear-gradient(135deg, #1e3a5f, #3b5a7e, #5a7a9e)',
-    emoji: '📚',
-    tags: ['#読書録', '#旅']
-  },
-  {
-    id: 'zen',
-    title: '禅の思考とプログラミング — 無駄を削ぎ落とす美学',
-    excerpt: '禅の「引き算の美学」は、コードのリファクタリングと驚くほど似ている。シンプルさを追求する心構え。',
-    category: 'テクノロジー',
-    date: '2026年1月20日',
-    readTime: '6分',
-    url: '#',
-    color: 'linear-gradient(135deg, #1a1a2e, #2d2d44, #444466)',
-    emoji: '🧘',
-    tags: ['#テクノロジー', '#エッセイ']
-  },
-  {
-    id: 'moon',
-    title: '月を見るたびに — 十五夜と暦の話',
-    excerpt: '日本の暦に刻まれた月のリズム。都会の夜空に見える月は、古人が見たものと同じなのだろうか。',
-    category: '文化・エッセイ',
-    date: '2026年1月5日',
-    readTime: '3分',
-    url: '#',
-    color: 'linear-gradient(135deg, #1a1a3e, #3a3a6e, #5a5a8e)',
-    emoji: '🌙',
-    tags: ['#エッセイ', '#日本文化']
-  }
-];
+// --- State ---
+let activeFilter = 'all';
 
-// --- Render blog cards ---
-function renderBlogCards() {
-  const grid = document.getElementById('blogGrid');
-  if (!grid) return;
-
-  grid.innerHTML = blogPosts.map((post, index) => `
-    <article class="blog-card fade-in" style="transition-delay: ${index * 0.1}s;" onclick="window.location.href='${post.url}'">
-      <div class="blog-card-image" style="background: ${post.color}; display:flex; align-items:center; justify-content:center; font-size:3.5rem; color:rgba(255,255,255,0.3);">
-        ${post.emoji}
-      </div>
-      <div class="blog-card-body">
-        <span class="card-category">${post.category}</span>
-        <h3>${post.title}</h3>
-        <p class="card-excerpt">${post.excerpt}</p>
-        <div class="card-meta">
-          <span class="date">📅 ${post.date}</span>
-          <span>☕ ${post.readTime}</span>
-        </div>
-      </div>
-    </article>
-  `).join('');
+// --- Tag translation helper ---
+function tagI18n(tag) {
+  const map = {
+    zh: { model: '模型', product: '产品', industry: '行业', paper: '论文', tutorial: '教程', agent: '智能体' },
+    ja: { model: 'モデル', product: 'プロダクト', industry: '業界', paper: '論文', tutorial: 'チュートリアル', agent: 'エージェント' },
+    en: { model: 'Model', product: 'Product', industry: 'Industry', paper: 'Paper', tutorial: 'Tutorial', agent: 'Agent' }
+  };
+  return map[currentLang]?.[tag] || tag;
 }
 
-// --- Intersection Observer for fade-in animations ---
-function initFadeInObserver() {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+// --- Render Timeline ---
+function renderNews() {
+  const timeline = document.getElementById('timeline');
+  if (!timeline) return;
 
-  document.querySelectorAll('.fade-in').forEach((el) => {
-    observer.observe(el);
+  let html = '';
+  let totalItems = 0;
+  let todayCount = 0;
+  const today = new Date().toISOString().split('T')[0];
+  const hotItems = [];
+
+  NEWS_DATA.forEach((dayData) => {
+    const dayStr = dayData.day;
+    const items = dayData.items.filter(item => {
+      if (activeFilter === 'all') return true;
+      return item.tags.includes(activeFilter);
+    });
+    if (items.length === 0) return;
+    totalItems += items.length;
+    if (dayStr === today) todayCount += items.length;
+
+    const dateLabel = DATE_FORMAT[currentLang](dayStr);
+    const isToday = dayStr === today;
+    const dayLabel = isToday
+      ? (currentLang === 'en' ? 'Today' : currentLang === 'ja' ? '今日' : '今天')
+      : dateLabel;
+
+    html += `<div class="timeline-day">
+      <div class="day-header" onclick="toggleDay(this)">
+        <h2>${isToday ? '📌 ' : '📅 '} ${dayLabel}</h2>
+        <span class="day-count">${items.length} ${currentLang === 'en' ? 'items' : '件'}</span>
+        <span class="collapse-icon">▼</span>
+      </div>
+      <div class="day-body">`;
+
+    items.forEach(item => {
+      const content = item[currentLang] || item.zh;
+      const heatColor = item.heat >= 90 ? '#ef4444' : item.heat >= 80 ? '#f59e0b' : '#22c55e';
+
+      html += `<div class="news-card" onclick="window.open('${item.url}','_blank')">
+        <div class="card-main">
+          <div class="card-title">${content.title}</div>
+          <div class="card-desc">${content.desc}</div>
+          <div class="card-meta">
+            <span class="card-source">${item.source}</span>
+            <span class="card-time">${item.time}</span>
+            <span class="card-tags">
+              ${item.tags.map(t => `<span class="card-tag ${t}">${tagI18n(t)}</span>`).join('')}
+            </span>
+          </div>
+        </div>
+        <div class="card-side">
+          <span class="card-heat" style="color:${heatColor}">${item.heat}</span>
+          <span class="card-heat-label">${currentLang === 'en' ? 'heat' : '热度'}</span>
+        </div>
+      </div>`;
+
+      if (hotItems.length < 5) {
+        hotItems.push({ title: content.title, source: item.source });
+      }
+    });
+    html += `</div></div>`;
+  });
+
+  timeline.innerHTML = html;
+  document.getElementById('todayCount').textContent = todayCount;
+  document.getElementById('totalArticles').textContent = totalItems;
+  renderHotItems(hotItems);
+}
+
+function renderHotItems(items) {
+  const container = document.getElementById('hotItems');
+  if (!container) return;
+  if (items.length === 0) {
+    container.innerHTML = `<span class="hot-item">暂无热点</span>`;
+    return;
+  }
+  container.innerHTML = items.map(item =>
+    `<span class="hot-item">🔥 ${item.title} <span class="hot-source">· ${item.source}</span></span>`
+  ).join('');
+}
+
+function toggleDay(header) {
+  header.classList.toggle('collapsed');
+  const body = header.nextElementSibling;
+  if (body) body.classList.toggle('collapsed');
+}
+
+// --- Language ---
+function initLanguage() {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
 }
 
-// --- Mobile nav toggle ---
-function initNavToggle() {
+// --- Theme ---
+function initTheme() {
+  const toggle = document.getElementById('themeToggle');
+  if (!toggle) return;
+  const saved = localStorage.getItem('aislime-theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+  toggle.addEventListener('click', () => {
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('aislime-theme', next);
+  });
+}
+
+// --- Filter ---
+function initFilters() {
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeFilter = tab.dataset.filter;
+      renderNews();
+    });
+  });
+}
+
+// --- Search ---
+function initSearch() {
+  const input = document.getElementById('searchInput');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    const q = input.value.toLowerCase().trim();
+    document.querySelectorAll('.news-card').forEach(card => {
+      card.style.display = q === '' || card.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+    document.querySelectorAll('.day-body').forEach(body => {
+      const visible = [...body.querySelectorAll('.news-card')].some(c => c.style.display !== 'none');
+      const header = body.previousElementSibling;
+      if (header) header.style.display = visible ? '' : 'none';
+    });
+  });
+}
+
+// --- Mobile Nav ---
+function initMobileNav() {
   const toggle = document.getElementById('navToggle');
   const nav = document.getElementById('mainNav');
   if (!toggle || !nav) return;
-
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-
-  // Close nav when clicking a link (for single-page feel)
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-    });
-  });
+  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 }
 
-// --- Scroll to top button ---
+// --- Scroll Top ---
 function initScrollTop() {
   const btn = document.getElementById('scrollTop');
   if (!btn) return;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
-    }
-  });
-
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400));
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-// --- Header scroll effect ---
-function initHeaderScroll() {
-  const header = document.querySelector('.site-header');
-  if (!header) return;
-
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    // Add shadow after scrolling
-    if (currentScroll > 10) {
-      header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
-    } else {
-      header.style.boxShadow = 'none';
-    }
-    lastScroll = currentScroll;
-  });
-}
-
-// --- Footer current year ---
-function initFooterYear() {
-  const yearEls = document.querySelectorAll('.footer-bottom span');
-  if (yearEls.length) {
-    // Year is hardcoded in HTML, could be dynamic but keeping static for consistency
-  }
-}
-
-// --- Initialize everything ---
+// --- Init ---
 document.addEventListener('DOMContentLoaded', () => {
-  renderBlogCards();
-  initFadeInObserver();
-  initNavToggle();
+  initLanguage();
+  initTheme();
+  initFilters();
+  initMobileNav();
   initScrollTop();
-  initHeaderScroll();
-  initFooterYear();
-
-  // Trigger fade-in for already visible elements after a tiny delay
-  setTimeout(() => {
-    document.querySelectorAll('.fade-in').forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight) {
-        el.classList.add('visible');
-      }
-    });
-  }, 100);
+  renderNews();
+  setTimeout(initSearch, 100);
 });
