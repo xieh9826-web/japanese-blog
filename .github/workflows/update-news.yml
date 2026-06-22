@@ -1,0 +1,31 @@
+name: 🤖 Auto Update AI News
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # Every 6 hours
+  workflow_dispatch:         # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch latest AI news
+        run: python scripts/fetch_news.py
+
+      - name: Commit & Push updates
+        run: |
+          git config user.name "AISlime Bot"
+          git config user.email "bot@aislime.app"
+          git add js/data.js
+          git diff --cached --quiet || git commit -m "🤖 Auto-update news $(date +'%Y-%m-%d %H:%M')"
+          git push
