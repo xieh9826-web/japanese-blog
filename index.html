@@ -20,9 +20,9 @@
       </a>
 
       <nav class="main-nav" id="mainNav">
-        <a href="index.html" class="active" data-i18n="nav.featured">精选</a>
-        <a href="trending.html" data-i18n="nav.trending">热门</a>
-        <a href="daily.html" data-i18n="nav.daily">AI 日报</a>
+        <a href="javascript:void(0)" class="active" data-view="featured" onclick="switchView('featured')" data-i18n="nav.featured">精选</a>
+        <a href="javascript:void(0)" data-view="trending" onclick="switchView('trending')" data-i18n="nav.trending">热门</a>
+        <a href="javascript:void(0)" data-view="daily" onclick="switchView('daily')" data-i18n="nav.daily">AI 日报</a>
         <a href="about.html" data-i18n="nav.about">关于</a>
       </nav>
 
@@ -117,9 +117,9 @@
       <div class="footer-section">
         <h4 data-i18n="nav.title">导航</h4>
         <ul>
-          <li><a href="index.html" data-i18n="nav.featured">精选</a></li>
-          <li><a href="trending.html" data-i18n="nav.trending">热门</a></li>
-          <li><a href="daily.html" data-i18n="nav.daily">AI 日报</a></li>
+          <li><a href="javascript:void(0)" onclick="switchView('featured')" data-i18n="nav.featured">精选</a></li>
+          <li><a href="javascript:void(0)" onclick="switchView('trending')" data-i18n="nav.trending">热门</a></li>
+          <li><a href="javascript:void(0)" onclick="switchView('daily')" data-i18n="nav.daily">AI 日报</a></li>
           <li><a href="about.html" data-i18n="nav.about">关于</a></li>
         </ul>
       </div>
