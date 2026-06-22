@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="日々の思索と創造を綴る、和風モダンな個人ブログ">
+  <title>刻々 — 日々の思索と創造</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">☕</span>
+        <span>刻々</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="active">ホーム</a>
+        <a href="about.html">について</a>
+        <a href="posts/桜と静寂.html">記事</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        <span class="jp-accent">刻々</span>と移ろう<br>
+        日々の<span class="jp-accent">記録</span>
+      </h1>
+      <p class="subtitle">
+        <span class="jp">—— 靜寂の中に、言葉を紡ぐ ——</span><br>
+        A Japanese personal blog on thoughts, culture &amp; creativity
+      </p>
+      <a href="#latest" class="btn btn-accent">📖 最新の記事を読む</a>
+    </div>
+  </section>
+
+  <!-- Latest Posts -->
+  <section id="latest" class="container">
+    <h2 class="section-title-jp">Latest Posts</h2>
+    <h3 class="section-title">最新の記事</h3>
+    <div class="section-divider"></div>
+
+    <!-- Featured Post -->
+    <article class="featured-post fade-in">
+      <div class="featured-image" style="background: linear-gradient(135deg, #2d4a22 0%, #6b7b3a 50%, #8fa35a 100%); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.4); font-size:4rem;">🎋</div>
+      <div class="featured-body">
+        <span class="card-category">文化・エッセイ</span>
+        <h2>桜と静寂 — 春の訪れを待つ京都の小さな寺で</h2>
+        <p class="featured-excerpt">
+          三月のある朝、まだ冷え込む空気の中、北山の小さな寺を訪れた。境内にはまだ蕾も固い桜の木が立ち、その枝の先に、かすかに色づき始めた蕾がいくつも見えた。静まり返った朝の空気の中に、春の息吹を感じるひとときを綴る。
+        </p>
+        <div class="card-meta">
+          <span>📅 2026年3月15日</span>
+          <span>☕ 読了時間: 5分</span>
+        </div>
+        <a href="posts/桜と静寂.html" class="btn btn-primary" style="margin-top: 1rem;">続きを読む →</a>
+      </div>
+    </article>
+
+    <!-- Blog Grid -->
+    <div class="blog-grid" id="blogGrid">
+      <!-- Cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="container" style="padding-top: 0;">
+    <div class="section-divider"></div>
+    <div class="profile-widget" style="max-width:600px; margin:0 auto;">
+      <div class="avatar">📝</div>
+      <p class="name">文月 慧 (Fumizuki Kei)</p>
+      <p class="bio">
+        東京在住のライター・ソフトウェアエンジニア。<br>
+        古きと新しきの狭間で、言葉とコードを紡ぐ。<br>
+        このブログでは、日々の思索、読書録、文化についてのエッセイを綴っています。
+      </p>
+      <div class="tag-cloud" style="justify-content:center; margin-top:1rem;">
+        <span class="tag">#エッセイ</span>
+        <span class="tag">#テクノロジー</span>
+        <span class="tag">#読書</span>
+        <span class="tag">#日本文化</span>
+        <span class="tag">#旅行</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h4>刻々 (Kokukoku)</h4>
+        <p>
+          日々の思索と創造を綴る、静かな個人ブログ。<br>
+          伝統と現代の狭間で見つけた、小さな物語たち。
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>リンク</h4>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="about.html">について</a></li>
+          <li><a href="posts/桜と静寂.html">記事</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>カテゴリー</h4>
+        <ul>
+          <li><a href="#">エッセイ (3)</a></li>
+          <li><a href="#">テクノロジー (2)</a></li>
+          <li><a href="#">読書録 (1)</a></li>
+          <li><a href="#">旅の記録 (1)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 刻々. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#" title="Twitter">𝕏</a>
+        <a href="#" title="GitHub">⌘</a>
+        <a href="#" title="RSS">📡</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="トップへ戻る">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
