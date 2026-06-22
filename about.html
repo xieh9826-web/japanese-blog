@@ -1,144 +1,87 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="刻々ブログについて — このサイトと書き手の紹介">
-  <title>について — 刻々</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <meta name="description" content="关于 AISlime — AI 前沿动态聚合平台">
+  <title>关于 — AISlime</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="site-logo">
-        <span class="logo-icon">☕</span>
-        <span>刻々</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="メニュー">☰</button>
+      <a href="index.html" class="site-logo"><span class="logo-icon">🧪</span><span>AISlime</span></a>
       <nav class="main-nav" id="mainNav">
-        <a href="index.html">ホーム</a>
-        <a href="about.html" class="active">について</a>
-        <a href="posts/桜と静寂.html">記事</a>
+        <a href="index.html" data-i18n="nav.featured">精选</a>
+        <a href="about.html" class="active" data-i18n="nav.about">关于</a>
       </nav>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="zh">繁</button>
+          <button class="lang-btn" data-lang="ja">日</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="theme-toggle" id="themeToggle">🌓</button>
+        <button class="nav-toggle" id="navToggle">☰</button>
+      </div>
     </div>
   </header>
 
-  <!-- Page Header -->
-  <div class="page-header">
-    <h1>このブログについて</h1>
-    <p class="breadcrumb"><a href="index.html">ホーム</a> / について</p>
+  <div class="hero" style="padding:6rem 1.5rem 3rem;">
+    <div class="hero-content">
+      <h1><span class="gradient-text">About</span><small>AISlime</small></h1>
+    </div>
   </div>
 
-  <!-- Content -->
-  <div class="layout-with-sidebar">
-    <main class="main-content">
-      <article class="post-content">
+  <main class="main-layout" style="max-width:760px; margin:0 auto; padding:2rem 1.5rem 4rem;">
+    <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.8; margin-bottom:1.5rem;">
+      <b style="color:var(--text-primary)">AISlime</b> 是一个 AI 前沿动态聚合平台，每日从全球多个信源精选 AI 行业最新动态。
+    </p>
 
-        <p>
-          「刻々」（こくこく）は、日々の思索と創造を記録するための静かな場所です。
-          伝統的な日本文化と、テクノロジーという現代的な営みの間で感じることを、
-          言葉として形にしていきたいと考えています。
-        </p>
+    <h2 style="font-size:1.1rem; color:var(--accent); margin:2rem 0 1rem;">✨ 特色</h2>
+    <ul style="color:var(--text-secondary); line-height:2; padding-left:1.2rem;">
+      <li><b>多信源聚合</b> — OpenAI、Google DeepMind、Anthropic、Meta 等一手信源</li>
+      <li><b>热度追踪</b> — 基于多维度指标的热度评分系统</li>
+      <li><b>多语言支持</b> — 中文 / 日本語 / English 即时切换</li>
+      <li><b>每日更新</b> — 追踪全球 AI 领域最新动态</li>
+    </ul>
 
-        <h2>このブログの名前について</h2>
-        <p>
-          「刻々」という言葉には、二つの意味を込めています。
-          一つは「刻々と変化する」という時間の移ろい。もう一つは「刻む」という、
-          その瞬間を記録する行為。時の流れに抗うのではなく、その一瞬一瞬を
-          丁寧に書き留めていく——そんな営みを大切にしたいという願いを名前に
-          託しました。
-        </p>
+    <h2 style="font-size:1.1rem; color:var(--accent); margin:2rem 0 1rem;">📡 信源</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+      <span class="card-tag model">OpenAI</span>
+      <span class="card-tag product">Google DeepMind</span>
+      <span class="card-tag industry">Anthropic</span>
+      <span class="card-tag paper">Meta AI</span>
+      <span class="card-tag tutorial">Microsoft</span>
+      <span class="card-tag agent">Stability AI</span>
+      <span class="card-tag model">Hugging Face</span>
+      <span class="card-tag product">Cursor</span>
+      <span class="card-tag industry">GitHub</span>
+    </div>
 
-        <h2>書いている人</h2>
-        <p>
-          文月 慧（ふみづき けい）。東京都在住。ライター兼ソフトウェアエンジニア。
-          大学では日本文学を専攻した後、IT業界へ。現在はフリーランスとして
-          技術系の記事執筆とWebアプリケーション開発を行っています。
-        </p>
-        <p>
-          休日は喫茶店で読書をしたり、京都や鎌倉の古寺を巡ったり、
-          あるいは趣味の写真撮影に出かけたり。古いものと新しいもの、
-          アナログとデジタルの間を漂うような日々を過ごしています。
-        </p>
+    <p style="color:var(--text-muted); font-size:0.82rem; margin-top:3rem;">
+      AISlime &copy; 2026. Built with ❤️ for the AI community.
+    </p>
+  </main>
 
-        <h2>このサイトについて</h2>
-        <p>
-          このサイトは GitHub Pages でホスティングされています。
-          デザインは和風モダンをテーマに、日本の伝統色を取り入れた
-          ミニマルなスタイルを採用。このブログ自体が一つの表現として、
-          見た目も含めて楽しんでいただければ幸いです。
-        </p>
-
-        <h2>お問い合わせ</h2>
-        <p>
-          ご質問やご感想がございましたら、以下のSNSアカウントまで
-          お気軽にお声がけください。
-        </p>
-        <p>
-          <a href="#" class="btn btn-outline">𝕏 (Twitter)</a>
-          <a href="#" class="btn btn-outline" style="margin-left:8px;">⌘ GitHub</a>
-        </p>
-
-      </article>
-    </main>
-
-    <!-- Sidebar -->
-    <aside>
-      <div class="profile-widget">
-        <div class="avatar">📝</div>
-        <p class="name">文月 慧</p>
-        <p class="bio">東京在住。言葉とコードを紡ぐライター兼エンジニア。</p>
-      </div>
-
-      <div class="widget">
-        <h3>最近の記事</h3>
-        <ul>
-          <li><a href="posts/桜と静寂.html">桜と静寂</a></li>
-          <li><a href="posts/喫茶店とエンジニア.html">喫茶店とエンジニア</a></li>
-          <li><a href="posts/本と旅.html">本と旅 — 移動中に読む一冊</a></li>
-        </ul>
-      </div>
-    </aside>
-  </div>
-
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-section">
-        <h4>刻々 (Kokukoku)</h4>
-        <p>日々の思索と創造を綴る、静かな個人ブログ。</p>
+        <h4>🧪 AISlime</h4>
+        <p data-i18n="footer.desc">AI 前沿动态聚合平台 · 每日精选</p>
       </div>
       <div class="footer-section">
-        <h4>リンク</h4>
-        <ul>
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="about.html">について</a></li>
-          <li><a href="posts/桜と静寂.html">記事</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>カテゴリー</h4>
-        <ul>
-          <li><a href="#">エッセイ (3)</a></li>
-          <li><a href="#">テクノロジー (2)</a></li>
-        </ul>
+        <h4 data-i18n="nav.title">导航</h4>
+        <ul><li><a href="index.html" data-i18n="nav.featured">精选</a></li></ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 刻々. All rights reserved.</span>
-      <div class="footer-social">
-        <a href="#" title="Twitter">𝕏</a>
-        <a href="#" title="GitHub">⌘</a>
-        <a href="#" title="RSS">📡</a>
-      </div>
-    </div>
+    <div class="footer-bottom"><span>&copy; 2026 AISlime</span></div>
   </footer>
 
-  <button class="scroll-top" id="scrollTop" aria-label="トップへ戻る">↑</button>
-
+  <button class="scroll-top" id="scrollTop">↑</button>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
