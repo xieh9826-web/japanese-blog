@@ -343,6 +343,77 @@ a:hover { color: var(--accent2); }
   filter: blur(2px);
 }
 
+/* === Date Navigation === */
+.date-nav {
+  position: relative; z-index: 1;
+  padding: .6rem 1.5rem;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--card-border);
+}
+.date-nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; gap: 8px;
+}
+.date-arrow {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  color: var(--text2);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .2s;
+  flex-shrink: 0;
+}
+.date-arrow:hover {
+  background: var(--card-hover);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.date-picker {
+  display: flex; gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1;
+  padding: 2px 0;
+}
+.date-picker::-webkit-scrollbar { display: none; }
+.date-item {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  color: var(--text2);
+  padding: 5px 14px;
+  font-size: .78rem; font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .25s;
+  font-family: var(--font);
+}
+.date-item:hover { background: var(--card-hover); color: var(--text); }
+.date-item.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 15px var(--glow);
+}
+.date-item.hasnews { border-color: var(--accent); }
+.date-today-btn {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  color: var(--text2);
+  padding: 5px 14px;
+  font-size: .78rem;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .25s;
+  font-family: var(--font);
+  flex-shrink: 0;
+}
+.date-today-btn:hover { background: var(--card-hover); color: var(--accent); }
+
 /* === Responsive === */
 @media (max-width:768px) {
   .main-nav {
