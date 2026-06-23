@@ -124,6 +124,8 @@ function setLanguage(lang) {
   
   // Re-render news
   if (window.renderNews) window.renderNews();
+  // Re-render dates
+  if (window.renderDates) window.renderDates();
 }
 
 function t(key) {
