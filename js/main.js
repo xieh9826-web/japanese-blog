@@ -71,6 +71,77 @@ function initParticles() {
 // --- State ---
 let activeFilter = 'all';
 let currentView = 'featured';
+let selectedDate = 'all'; // 'all' or 'YYYY-MM-DD'
+
+// --- Date Navigation ---
+function initDateNav() {
+  const picker = document.getElementById('datePicker');
+  const prev = document.getElementById('datePrev');
+  const next = document.getElementById('dateNext');
+  const todayBtn = document.getElementById('dateToday');
+  if (!picker) return;
+
+  function renderDates() {
+    const dates = new Set();
+    NEWS_DATA.forEach(dd => dates.add(dd.day));
+    const sorted = [...dates].sort((a,b) => b.localeCompare(a));
+    picker.innerHTML = '<button class="date-item ' + (selectedDate === 'all' ? 'active' : '') + '" data-date="all">' + (currentLang === 'en' ? 'All' : currentLang === 'ja' ? 'すべて' : '全部') + '</button>' +
+      sorted.map(d => {
+        const label = DATE_FORMAT[currentLang](d);
+        return `<button class="date-item${selectedDate === d ? ' active' : ''} hasnews" data-date="${d}">${label}</button>`;
+      }).join('');
+
+    picker.querySelectorAll('.date-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedDate = btn.dataset.date;
+        renderDates();
+        renderNews();
+      });
+    });
+  }
+
+  if (prev) prev.addEventListener('click', () => navigateDate(-1));
+  if (next) next.addEventListener('click', () => navigateDate(1));
+  if (todayBtn) todayBtn.addEventListener('click', () => {
+    selectedDate = 'all';
+    renderDates();
+    renderNews();
+  });
+
+  renderDates();
+}
+
+function navigateDate(dir) {
+  const dates = [...new Set(NEWS_DATA.map(dd => dd.day))].sort();
+  if (selectedDate === 'all') {
+    selectedDate = dates[0];
+  } else {
+    const idx = dates.indexOf(selectedDate);
+    const newIdx = Math.max(0, Math.min(dates.length - 1, idx + dir));
+    selectedDate = dates[newIdx];
+  }
+  renderDates();
+  renderNews();
+}
+
+// Re-render dates on language change
+function renderDates() {
+  const picker = document.getElementById('datePicker');
+  if (!picker) return;
+  const dates = [...new Set(NEWS_DATA.map(dd => dd.day))].sort((a,b) => b.localeCompare(a));
+  picker.innerHTML = '<button class="date-item ' + (selectedDate === 'all' ? 'active' : '') + '" data-date="all">' + (currentLang === 'en' ? 'All' : currentLang === 'ja' ? 'すべて' : '全部') + '</button>' +
+    dates.map(d => {
+      const label = DATE_FORMAT[currentLang](d);
+      return `<button class="date-item${selectedDate === d ? ' active' : ''} hasnews" data-date="${d}">${label}</button>`;
+    }).join('');
+  picker.querySelectorAll('.date-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      selectedDate = btn.dataset.date;
+      renderDates();
+      renderNews();
+    });
+  });
+}
 
 // --- View Switching ---
 function switchView(view) {
@@ -167,7 +238,9 @@ function renderNews() {
       return item.tags.includes(activeFilter);
     });
 
+    // View filtering
     if (currentView === 'daily' && dayStr !== today) return;
+    if (selectedDate !== 'all' && dayStr !== selectedDate) return;
     if (items.length === 0) return;
     totalItems += items.length;
     if (dayStr === today) todayCount += items.length;
@@ -312,6 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguage();
   initTheme();
   initFilters();
+  initDateNav();
   initMobileNav();
   initScrollTop();
 
