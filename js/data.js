@@ -1,86 +1,88 @@
 // AISlime — Auto-generated news data
-// Generated: 2026-06-23T20:07:01.463240+00:00
+// Generated: 2026-06-24T03:38:32.645865+00:00
 const NEWS_DATA = [
+  { day: '2026-06-24', items: [
+    {
+      id: 8121,
+      zh: { title: 'DiffusionBench: Towards Holistic Evaluation of Generative Diffusion Transformers', desc: '' },
+      ja: { title: 'DiffusionBench: Towards Holistic Evaluation of Generative Diffusion Transformers', desc: '' },
+      en: { title: 'DiffusionBench: Towards Holistic Evaluation of Generative Diffusion Transformers', desc: '' },
+      source: 'HN (ilreb)', time: '02:12', heat: 53,
+      tags: ["model", "product"], url: 'https://github.com/End2End-Diffusion/diffusion-bench'
+    },
+    {
+      id: 6388,
+      zh: { title: '[arXiv] Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-train', desc: 'Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study ' },
+      ja: { title: '[arXiv] Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-train', desc: 'Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study ' },
+      en: { title: '[arXiv] Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-train', desc: 'Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study ' },
+      source: 'arXiv', time: '03:38', heat: 74,
+      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24841v1'
+    },
+    {
+      id: 2699,
+      zh: { title: '[arXiv] Paying to Know: Micro-Transaction Markets for Verified Product Information in Agentic E-Commerce', desc: 'Commercial NLP treats the shopping chatbot as a recommender or a conversion tool: its job is to matc' },
+      ja: { title: '[arXiv] Paying to Know: Micro-Transaction Markets for Verified Product Information in Agentic E-Commerce', desc: 'Commercial NLP treats the shopping chatbot as a recommender or a conversion tool: its job is to matc' },
+      en: { title: '[arXiv] Paying to Know: Micro-Transaction Markets for Verified Product Information in Agentic E-Commerce', desc: 'Commercial NLP treats the shopping chatbot as a recommender or a conversion tool: its job is to matc' },
+      source: 'arXiv', time: '03:38', heat: 71,
+      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24783v1'
+    },
+    {
+      id: 5902,
+      zh: { title: '[arXiv] Task Decomposition for Efficient Annotation', desc: 'High-quality annotations of structured representations are expensive to collect over large corpora. ' },
+      ja: { title: '[arXiv] Task Decomposition for Efficient Annotation', desc: 'High-quality annotations of structured representations are expensive to collect over large corpora. ' },
+      en: { title: '[arXiv] Task Decomposition for Efficient Annotation', desc: 'High-quality annotations of structured representations are expensive to collect over large corpora. ' },
+      source: 'arXiv', time: '03:38', heat: 77,
+      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24734v1'
+    },
+    {
+      id: 2078,
+      zh: { title: '[arXiv] AI-PAVE-Br: Leveraging Large Language Models for Enhanced Product Attribute Value Extraction through', desc: 'The explosive growth and complexity of product data within the dynamic Brazilian e-commerce landscap' },
+      ja: { title: '[arXiv] AI-PAVE-Br: Leveraging Large Language Models for Enhanced Product Attribute Value Extraction through', desc: 'The explosive growth and complexity of product data within the dynamic Brazilian e-commerce landscap' },
+      en: { title: '[arXiv] AI-PAVE-Br: Leveraging Large Language Models for Enhanced Product Attribute Value Extraction through', desc: 'The explosive growth and complexity of product data within the dynamic Brazilian e-commerce landscap' },
+      source: 'arXiv', time: '03:38', heat: 84,
+      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24655v1'
+    },
+    {
+      id: 5550,
+      zh: { title: '[arXiv] Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Comprom', desc: 'Retrieval-Augmented Generation enhances large language models by incorporating external knowledge, b' },
+      ja: { title: '[arXiv] Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Comprom', desc: 'Retrieval-Augmented Generation enhances large language models by incorporating external knowledge, b' },
+      en: { title: '[arXiv] Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Comprom', desc: 'Retrieval-Augmented Generation enhances large language models by incorporating external knowledge, b' },
+      source: 'arXiv', time: '03:38', heat: 72,
+      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24623v1'
+    },
+  ]},
   { day: '2026-06-23', items: [
     {
-      id: 8484,
-      zh: { title: 'Anthropic updates their terms to verify age or identity', desc: '' },
-      ja: { title: 'Anthropic updates their terms to verify age or identity', desc: '' },
-      en: { title: 'Anthropic updates their terms to verify age or identity', desc: '' },
-      source: 'HN (arunc)', time: '19:45', heat: 69,
-      tags: ["model", "product"], url: 'https://www.anthropic.com/legal/privacy'
+      id: 7386,
+      zh: { title: 'Show HN: RLM-based local debugger for AI agent traces', desc: '' },
+      ja: { title: 'Show HN: RLM-based local debugger for AI agent traces', desc: '' },
+      en: { title: 'Show HN: RLM-based local debugger for AI agent traces', desc: '' },
+      source: 'HN (mikepollard_dev)', time: '18:21', heat: 56,
+      tags: ["model", "product"], url: 'https://github.com/context-labs/halo'
     },
     {
-      id: 3271,
-      zh: { title: 'Claude Tag', desc: '' },
-      ja: { title: 'Claude Tag', desc: '' },
-      en: { title: 'Claude Tag', desc: '' },
-      source: 'HN (adocomplete)', time: '17:09', heat: 95,
-      tags: ["model", "product"], url: 'https://www.anthropic.com/news/introducing-claude-tag'
-    },
-    {
-      id: 1962,
-      zh: { title: 'AI Hiring Tools Yield Racial Bias and Systemic Rejection; 26% Black & 15% Asian', desc: '' },
-      ja: { title: 'AI Hiring Tools Yield Racial Bias and Systemic Rejection; 26% Black & 15% Asian', desc: '' },
-      en: { title: 'AI Hiring Tools Yield Racial Bias and Systemic Rejection; 26% Black & 15% Asian', desc: '' },
-      source: 'HN (sizzle)', time: '18:56', heat: 58,
-      tags: ["model", "product"], url: 'https://hai.stanford.edu/news/ai-hiring-tools-can-yield-racial-bias-and-systemic-rejection'
-    },
-    {
-      id: 2400,
-      zh: { title: 'Mistral OCR 4', desc: '' },
-      ja: { title: 'Mistral OCR 4', desc: '' },
-      en: { title: 'Mistral OCR 4', desc: '' },
-      source: 'HN (meetpateltech)', time: '14:03', heat: 95,
-      tags: ["model", "product"], url: 'https://mistral.ai/news/ocr-4/'
-    },
-    {
-      id: 8654,
+      id: 6168,
       zh: { title: 'The Low-Tech AI of Elden Ring', desc: '' },
       ja: { title: 'The Low-Tech AI of Elden Ring', desc: '' },
       en: { title: 'The Low-Tech AI of Elden Ring', desc: '' },
-      source: 'HN (g0xA52A2A)', time: '11:40', heat: 83,
+      source: 'HN (g0xA52A2A)', time: '11:40', heat: 95,
       tags: ["model", "product"], url: 'https://nega.tv/posts/low-tech-ai-of-elden-ring.html'
     },
     {
-      id: 3225,
-      zh: { title: '[arXiv] Tapered Language Models', desc: 'Modern language models, including transformer, recurrent, and memory-based variants, share a common ' },
-      ja: { title: '[arXiv] Tapered Language Models', desc: 'Modern language models, including transformer, recurrent, and memory-based variants, share a common ' },
-      en: { title: '[arXiv] Tapered Language Models', desc: 'Modern language models, including transformer, recurrent, and memory-based variants, share a common ' },
-      source: 'arXiv', time: '20:07', heat: 72,
-      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.23670v1'
+      id: 3644,
+      zh: { title: 'Don\'t verify email addresses by sending spam to them', desc: '' },
+      ja: { title: 'Don\'t verify email addresses by sending spam to them', desc: '' },
+      en: { title: 'Don\'t verify email addresses by sending spam to them', desc: '' },
+      source: 'HN (garaetjjte)', time: '20:23', heat: 95,
+      tags: ["model", "product"], url: 'https://milek7.pl/mailverifyspam/'
     },
     {
-      id: 7814,
-      zh: { title: '[arXiv] The Energy Consumption of Transformer Fine-Tuning: A Roofline-Inspired Scaling Model', desc: 'Transformer-based models underpin modern natural language processing but incur rapidly growing compu' },
-      ja: { title: '[arXiv] The Energy Consumption of Transformer Fine-Tuning: A Roofline-Inspired Scaling Model', desc: 'Transformer-based models underpin modern natural language processing but incur rapidly growing compu' },
-      en: { title: '[arXiv] The Energy Consumption of Transformer Fine-Tuning: A Roofline-Inspired Scaling Model', desc: 'Transformer-based models underpin modern natural language processing but incur rapidly growing compu' },
-      source: 'arXiv', time: '20:07', heat: 77,
-      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.23546v1'
-    },
-    {
-      id: 6498,
-      zh: { title: '[arXiv] VeriEvol: Scaling Multimodal Mathematical Reasoning via Verifiable Evol-Instruct', desc: 'Scaling reinforcement learning for visual mathematical reasoning requires more than generating harde' },
-      ja: { title: '[arXiv] VeriEvol: Scaling Multimodal Mathematical Reasoning via Verifiable Evol-Instruct', desc: 'Scaling reinforcement learning for visual mathematical reasoning requires more than generating harde' },
-      en: { title: '[arXiv] VeriEvol: Scaling Multimodal Mathematical Reasoning via Verifiable Evol-Instruct', desc: 'Scaling reinforcement learning for visual mathematical reasoning requires more than generating harde' },
-      source: 'arXiv', time: '20:07', heat: 85,
-      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.23543v1'
-    },
-    {
-      id: 3601,
-      zh: { title: '[arXiv] War in the Abstract: The Rise and Consequences of Militarized Language in Scientific Communication', desc: 'Scientists do not, by profession, wage war. Yet warfare\'s vocabulary consistently appears in their a' },
-      ja: { title: '[arXiv] War in the Abstract: The Rise and Consequences of Militarized Language in Scientific Communication', desc: 'Scientists do not, by profession, wage war. Yet warfare\'s vocabulary consistently appears in their a' },
-      en: { title: '[arXiv] War in the Abstract: The Rise and Consequences of Militarized Language in Scientific Communication', desc: 'Scientists do not, by profession, wage war. Yet warfare\'s vocabulary consistently appears in their a' },
-      source: 'arXiv', time: '20:07', heat: 73,
-      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.23462v1'
-    },
-    {
-      id: 4136,
-      zh: { title: '[arXiv] UnBias-Plus: Detect, Explain, and Rewrite Bias', desc: 'Bias in natural language remains a persistent challenge in both human-written and AI-generated conte' },
-      ja: { title: '[arXiv] UnBias-Plus: Detect, Explain, and Rewrite Bias', desc: 'Bias in natural language remains a persistent challenge in both human-written and AI-generated conte' },
-      en: { title: '[arXiv] UnBias-Plus: Detect, Explain, and Rewrite Bias', desc: 'Bias in natural language remains a persistent challenge in both human-written and AI-generated conte' },
-      source: 'arXiv', time: '20:07', heat: 83,
-      tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.23412v1'
+      id: 6153,
+      zh: { title: 'Trains halted across Germany because of communication system problem', desc: '' },
+      ja: { title: 'Trains halted across Germany because of communication system problem', desc: '' },
+      en: { title: 'Trains halted across Germany because of communication system problem', desc: '' },
+      source: 'HN (sva_)', time: '21:19', heat: 95,
+      tags: ["model", "product"], url: 'https://apnews.com/article/germany-trains-halted-communications-radio-problem-deutsche-bahn-e8fd970b2d889f3ae7ce03322d5c726b'
     },
   ]},
 ];
