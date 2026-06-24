@@ -1,88 +1,86 @@
 // AISlime — Auto-generated news data
-// Generated: 2026-06-24T14:32:16.605304+00:00
+// Generated: 2026-06-24T19:46:55.406226+00:00
 const NEWS_DATA = [
   { day: '2026-06-24', items: [
     {
-      id: 7700,
-      zh: { title: 'Minimus container images are now free', desc: '' },
-      ja: { title: 'Minimus container images are now free', desc: '' },
-      en: { title: 'Minimus container images are now free', desc: '' },
-      source: 'HN (dimastopel)', time: '11:52', heat: 86,
-      tags: ["model", "product"], url: 'https://images.minimus.io/'
+      id: 9462,
+      zh: { title: 'OpenAI unveils its first custom chip, built by Broadcom', desc: '' },
+      ja: { title: 'OpenAI unveils its first custom chip, built by Broadcom', desc: '' },
+      en: { title: 'OpenAI unveils its first custom chip, built by Broadcom', desc: '' },
+      source: 'HN (jamdesk)', time: '17:47', heat: 95,
+      tags: ["model", "product"], url: 'https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/'
     },
     {
-      id: 4297,
-      zh: { title: 'Haystack: Open-Source AI Framework for Production Ready Agents, RAG', desc: '' },
-      ja: { title: 'Haystack: Open-Source AI Framework for Production Ready Agents, RAG', desc: '' },
-      en: { title: 'Haystack: Open-Source AI Framework for Production Ready Agents, RAG', desc: '' },
-      source: 'HN (doener)', time: '11:21', heat: 63,
-      tags: ["model", "product"], url: 'https://haystack.deepset.ai/'
+      id: 8111,
+      zh: { title: 'Thomann takes legal action against Fender', desc: '' },
+      ja: { title: 'Thomann takes legal action against Fender', desc: '' },
+      en: { title: 'Thomann takes legal action against Fender', desc: '' },
+      source: 'HN (Audiophilip)', time: '19:08', heat: 69,
+      tags: ["model", "product"], url: 'https://www.thomann.de/blog/en/inside/thomann-takes-legal-action-against-fender/'
     },
     {
-      id: 9191,
-      zh: { title: 'Reid Hoffman says SpaceX \'not an AI company\', xAI \'complete train wreck\'', desc: '' },
-      ja: { title: 'Reid Hoffman says SpaceX \'not an AI company\', xAI \'complete train wreck\'', desc: '' },
-      en: { title: 'Reid Hoffman says SpaceX \'not an AI company\', xAI \'complete train wreck\'', desc: '' },
-      source: 'HN (1vuio0pswjnm7)', time: '12:23', heat: 95,
-      tags: ["model", "product"], url: 'https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake/'
+      id: 5812,
+      zh: { title: 'RubyLLM: A Ruby framework for all major AI providers', desc: '' },
+      ja: { title: 'RubyLLM: A Ruby framework for all major AI providers', desc: '' },
+      en: { title: 'RubyLLM: A Ruby framework for all major AI providers', desc: '' },
+      source: 'HN (doener)', time: '14:41', heat: 95,
+      tags: ["model", "product"], url: 'https://rubyllm.com/'
     },
     {
-      id: 7984,
-      zh: { title: 'OpenAI and Broadcom unveil LLM-optimized inference chip', desc: '' },
-      ja: { title: 'OpenAI and Broadcom unveil LLM-optimized inference chip', desc: '' },
-      en: { title: 'OpenAI and Broadcom unveil LLM-optimized inference chip', desc: '' },
-      source: 'HN (meetpateltech)', time: '13:14', heat: 58,
-      tags: ["model", "product"], url: 'https://openai.com/index/openai-broadcom-jalapeno-inference-chip/'
+      id: 1463,
+      zh: { title: 'PR spam today looks like email spam in the early 2000s', desc: '' },
+      ja: { title: 'PR spam today looks like email spam in the early 2000s', desc: '' },
+      en: { title: 'PR spam today looks like email spam in the early 2000s', desc: '' },
+      source: 'HN (dakshgupta)', time: '14:32', heat: 95,
+      tags: ["model", "product"], url: 'https://www.greptile.com/blog/prs-on-openclaw'
     },
     {
-      id: 5055,
+      id: 7989,
+      zh: { title: 'Computer use in Gemini 3.5 Flash', desc: '' },
+      ja: { title: 'Computer use in Gemini 3.5 Flash', desc: '' },
+      en: { title: 'Computer use in Gemini 3.5 Flash', desc: '' },
+      source: 'HN (swolpers)', time: '17:21', heat: 90,
+      tags: ["model", "product"], url: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/'
+    },
+    {
+      id: 9361,
       zh: { title: '[arXiv] Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-train', desc: 'Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study ' },
       ja: { title: '[arXiv] Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-train', desc: 'Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study ' },
       en: { title: '[arXiv] Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-train', desc: 'Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study ' },
-      source: 'arXiv', time: '14:32', heat: 72,
+      source: 'arXiv', time: '19:46', heat: 68,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24841v1'
     },
     {
-      id: 9464,
+      id: 8940,
       zh: { title: '[arXiv] Paying to Know: Micro-Transaction Markets for Verified Product Information in Agentic E-Commerce', desc: 'Commercial NLP treats the shopping chatbot as a recommender or a conversion tool: its job is to matc' },
       ja: { title: '[arXiv] Paying to Know: Micro-Transaction Markets for Verified Product Information in Agentic E-Commerce', desc: 'Commercial NLP treats the shopping chatbot as a recommender or a conversion tool: its job is to matc' },
       en: { title: '[arXiv] Paying to Know: Micro-Transaction Markets for Verified Product Information in Agentic E-Commerce', desc: 'Commercial NLP treats the shopping chatbot as a recommender or a conversion tool: its job is to matc' },
-      source: 'arXiv', time: '14:32', heat: 80,
+      source: 'arXiv', time: '19:46', heat: 82,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24783v1'
     },
     {
-      id: 4213,
+      id: 9224,
       zh: { title: '[arXiv] Task Decomposition for Efficient Annotation', desc: 'High-quality annotations of structured representations are expensive to collect over large corpora. ' },
       ja: { title: '[arXiv] Task Decomposition for Efficient Annotation', desc: 'High-quality annotations of structured representations are expensive to collect over large corpora. ' },
       en: { title: '[arXiv] Task Decomposition for Efficient Annotation', desc: 'High-quality annotations of structured representations are expensive to collect over large corpora. ' },
-      source: 'arXiv', time: '14:32', heat: 71,
+      source: 'arXiv', time: '19:46', heat: 77,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24734v1'
     },
     {
-      id: 5853,
+      id: 4042,
       zh: { title: '[arXiv] AI-PAVE-Br: Leveraging Large Language Models for Enhanced Product Attribute Value Extraction through', desc: 'The explosive growth and complexity of product data within the dynamic Brazilian e-commerce landscap' },
       ja: { title: '[arXiv] AI-PAVE-Br: Leveraging Large Language Models for Enhanced Product Attribute Value Extraction through', desc: 'The explosive growth and complexity of product data within the dynamic Brazilian e-commerce landscap' },
       en: { title: '[arXiv] AI-PAVE-Br: Leveraging Large Language Models for Enhanced Product Attribute Value Extraction through', desc: 'The explosive growth and complexity of product data within the dynamic Brazilian e-commerce landscap' },
-      source: 'arXiv', time: '14:32', heat: 67,
+      source: 'arXiv', time: '19:46', heat: 76,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24655v1'
     },
     {
-      id: 1599,
+      id: 5046,
       zh: { title: '[arXiv] Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Comprom', desc: 'Retrieval-Augmented Generation enhances large language models by incorporating external knowledge, b' },
       ja: { title: '[arXiv] Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Comprom', desc: 'Retrieval-Augmented Generation enhances large language models by incorporating external knowledge, b' },
       en: { title: '[arXiv] Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Comprom', desc: 'Retrieval-Augmented Generation enhances large language models by incorporating external knowledge, b' },
-      source: 'arXiv', time: '14:32', heat: 76,
+      source: 'arXiv', time: '19:46', heat: 82,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.24623v1'
-    },
-  ]},
-  { day: '2026-06-22', items: [
-    {
-      id: 7412,
-      zh: { title: 'Why eval startups fail (2025)', desc: '' },
-      ja: { title: 'Why eval startups fail (2025)', desc: '' },
-      en: { title: 'Why eval startups fail (2025)', desc: '' },
-      source: 'HN (jxmorris12)', time: '23:20', heat: 75,
-      tags: ["model", "product"], url: 'https://thomasliao.com/eval-startups'
     },
   ]},
 ];
