@@ -1,88 +1,88 @@
 // AISlime — Auto-generated news data
-// Generated: 2026-06-25T14:34:44.482044+00:00
+// Generated: 2026-06-25T20:01:31.943530+00:00
 const NEWS_DATA = [
   { day: '2026-06-25', items: [
     {
-      id: 3404,
-      zh: { title: 'Where every major LLM stands politically', desc: '' },
-      ja: { title: 'Where every major LLM stands politically', desc: '' },
-      en: { title: 'Where every major LLM stands politically', desc: '' },
-      source: 'HN (mektrik)', time: '13:08', heat: 59,
-      tags: ["model", "product"], url: 'https://trakkr.ai/bias'
+      id: 9289,
+      zh: { title: 'Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion', desc: '' },
+      ja: { title: 'Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion', desc: '' },
+      en: { title: 'Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion', desc: '' },
+      source: 'HN (engomez)', time: '16:04', heat: 70,
+      tags: ["model", "product"], url: 'https://github.com/inkeep/open-knowledge'
     },
     {
-      id: 8159,
-      zh: { title: 'Wikipedia Workers in Britain set global first by seeking union recognition', desc: '' },
-      ja: { title: 'Wikipedia Workers in Britain set global first by seeking union recognition', desc: '' },
-      en: { title: 'Wikipedia Workers in Britain set global first by seeking union recognition', desc: '' },
-      source: 'HN (chobeat)', time: '07:02', heat: 95,
-      tags: ["model", "product"], url: 'https://utaw.tech/news/wikipedia-recognition'
+      id: 7543,
+      zh: { title: 'Apple raises prices of MacBooks, iPads', desc: '' },
+      ja: { title: 'Apple raises prices of MacBooks, iPads', desc: '' },
+      en: { title: 'Apple raises prices of MacBooks, iPads', desc: '' },
+      source: 'HN (virgildotcodes)', time: '13:02', heat: 95,
+      tags: ["model", "product"], url: 'https://www.reuters.com/world/asia-pacific/apple-raises-prices-macbooks-ipads-memory-costs-skyrocket-2026-06-25/'
     },
     {
-      id: 4616,
-      zh: { title: 'Tell HN: OpenAI has started putting ads on paid programs', desc: '' },
-      ja: { title: 'Tell HN: OpenAI has started putting ads on paid programs', desc: '' },
-      en: { title: 'Tell HN: OpenAI has started putting ads on paid programs', desc: '' },
-      source: 'HN (shantnutiwari)', time: '13:37', heat: 58,
-      tags: ["model", "product"], url: 'https://news.ycombinator.com/item?id=48673194'
+      id: 9626,
+      zh: { title: 'Besimple AI (YC P25) Is Hiring', desc: '' },
+      ja: { title: 'Besimple AI (YC P25) Is Hiring', desc: '' },
+      en: { title: 'Besimple AI (YC P25) Is Hiring', desc: '' },
+      source: 'HN (yzhong94)', time: '17:00', heat: 50,
+      tags: ["model", "product"], url: 'https://www.ycombinator.com/companies/besimple-ai/jobs/yWfhhOR-strategic-projects-lead-audio-data'
     },
     {
-      id: 7473,
+      id: 9147,
+      zh: { title: 'AI Is Designing Radio Chips That Humans Couldn\'t Even Imagine', desc: '' },
+      ja: { title: 'AI Is Designing Radio Chips That Humans Couldn\'t Even Imagine', desc: '' },
+      en: { title: 'AI Is Designing Radio Chips That Humans Couldn\'t Even Imagine', desc: '' },
+      source: 'HN (pseudolus)', time: '19:39', heat: 52,
+      tags: ["model", "product"], url: 'https://spectrum.ieee.org/ai-radio-chip-design'
+    },
+    {
+      id: 1816,
       zh: { title: '[arXiv] Natural Ungrokking: Asymmetric Control of Which Rules Survive Pretraining', desc: 'Midway through an ordinary pretraining run, a small language model learns the pronoun-gender rule: c' },
       ja: { title: '[arXiv] Natural Ungrokking: Asymmetric Control of Which Rules Survive Pretraining', desc: 'Midway through an ordinary pretraining run, a small language model learns the pronoun-gender rule: c' },
       en: { title: '[arXiv] Natural Ungrokking: Asymmetric Control of Which Rules Survive Pretraining', desc: 'Midway through an ordinary pretraining run, a small language model learns the pronoun-gender rule: c' },
-      source: 'arXiv', time: '14:34', heat: 81,
+      source: 'arXiv', time: '20:01', heat: 66,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.26050v1'
     },
     {
-      id: 7193,
+      id: 8465,
       zh: { title: '[arXiv] Autodata: An agentic data scientist to create high quality synthetic data', desc: 'We introduce Autodata, a general method that enables AI agents to act as data scientists who build h' },
       ja: { title: '[arXiv] Autodata: An agentic data scientist to create high quality synthetic data', desc: 'We introduce Autodata, a general method that enables AI agents to act as data scientists who build h' },
       en: { title: '[arXiv] Autodata: An agentic data scientist to create high quality synthetic data', desc: 'We introduce Autodata, a general method that enables AI agents to act as data scientists who build h' },
-      source: 'arXiv', time: '14:34', heat: 78,
+      source: 'arXiv', time: '20:01', heat: 70,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.25996v1'
     },
     {
-      id: 1159,
+      id: 7246,
       zh: { title: '[arXiv] SpeechEQ: Benchmarking Emotional Intelligence Quotient in Socially Aware Voice Conversational Models', desc: 'As multimodal conversational systems increasingly engage in spoken interaction, their ability to nav' },
       ja: { title: '[arXiv] SpeechEQ: Benchmarking Emotional Intelligence Quotient in Socially Aware Voice Conversational Models', desc: 'As multimodal conversational systems increasingly engage in spoken interaction, their ability to nav' },
       en: { title: '[arXiv] SpeechEQ: Benchmarking Emotional Intelligence Quotient in Socially Aware Voice Conversational Models', desc: 'As multimodal conversational systems increasingly engage in spoken interaction, their ability to nav' },
-      source: 'arXiv', time: '14:34', heat: 79,
+      source: 'arXiv', time: '20:01', heat: 80,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.25990v1'
     },
     {
-      id: 9437,
+      id: 3323,
       zh: { title: '[arXiv] Weave of Formal Thought', desc: 'Large language models (LLMs) attain remarkable surface fluency on code, yet they neither formally gu' },
       ja: { title: '[arXiv] Weave of Formal Thought', desc: 'Large language models (LLMs) attain remarkable surface fluency on code, yet they neither formally gu' },
       en: { title: '[arXiv] Weave of Formal Thought', desc: 'Large language models (LLMs) attain remarkable surface fluency on code, yet they neither formally gu' },
-      source: 'arXiv', time: '14:34', heat: 82,
+      source: 'arXiv', time: '20:01', heat: 71,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.25987v1'
     },
     {
-      id: 6240,
+      id: 9227,
       zh: { title: '[arXiv] Overview of HIPE-2026: Person-Place Relation Extraction from Multilingual Historical Texts', desc: 'Was this person ever at that place, and if so, when? Answering such questions from noisy, multilingu' },
       ja: { title: '[arXiv] Overview of HIPE-2026: Person-Place Relation Extraction from Multilingual Historical Texts', desc: 'Was this person ever at that place, and if so, when? Answering such questions from noisy, multilingu' },
       en: { title: '[arXiv] Overview of HIPE-2026: Person-Place Relation Extraction from Multilingual Historical Texts', desc: 'Was this person ever at that place, and if so, when? Answering such questions from noisy, multilingu' },
-      source: 'arXiv', time: '14:34', heat: 68,
+      source: 'arXiv', time: '20:01', heat: 84,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.25935v1'
     },
   ]},
-  { day: '2026-06-24', items: [
+  { day: '2026-06-22', items: [
     {
-      id: 4670,
-      zh: { title: 'Anthropic says Alibaba illicitly extracted Claude AI model capabilities', desc: '' },
-      ja: { title: 'Anthropic says Alibaba illicitly extracted Claude AI model capabilities', desc: '' },
-      en: { title: 'Anthropic says Alibaba illicitly extracted Claude AI model capabilities', desc: '' },
-      source: 'HN (htrp)', time: '19:48', heat: 95,
-      tags: ["model", "product"], url: 'https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/'
-    },
-    {
-      id: 6862,
-      zh: { title: 'OpenAI unveils its first custom chip, built by Broadcom', desc: '' },
-      ja: { title: 'OpenAI unveils its first custom chip, built by Broadcom', desc: '' },
-      en: { title: 'OpenAI unveils its first custom chip, built by Broadcom', desc: '' },
-      source: 'HN (jamdesk)', time: '17:47', heat: 95,
-      tags: ["model", "product"], url: 'https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/'
+      id: 7468,
+      zh: { title: 'The annotated PyTorch training loop', desc: '' },
+      ja: { title: 'The annotated PyTorch training loop', desc: '' },
+      en: { title: 'The annotated PyTorch training loop', desc: '' },
+      source: 'HN (smaddrellmander)', time: '23:44', heat: 59,
+      tags: ["model", "product"], url: 'https://idlemachines.co.uk/essays/pytorch-training-loop'
     },
   ]},
 ];
