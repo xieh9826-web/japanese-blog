@@ -1,90 +1,86 @@
 // AISlime — Auto-generated news data
-// Generated: 2026-06-28T13:47:23.444104+00:00
+// Generated: 2026-06-28T19:21:01.980478+00:00
 const NEWS_DATA = [
   { day: '2026-06-28', items: [
     {
-      id: 8805,
+      id: 4857,
+      zh: { title: 'I used Claude Code to get a second opinion on my MRI', desc: '' },
+      ja: { title: 'I used Claude Code to get a second opinion on my MRI', desc: '' },
+      en: { title: 'I used Claude Code to get a second opinion on my MRI', desc: '' },
+      source: 'HN (engmarketer)', time: '16:35', heat: 95,
+      tags: ["model", "product"], url: 'https://antoine.fi/mri-analysis-using-claude-code-opus'
+    },
+    {
+      id: 7452,
+      zh: { title: 'Daisugi, the Japanese technique of growing trees out of other trees (2020)', desc: '' },
+      ja: { title: 'Daisugi, the Japanese technique of growing trees out of other trees (2020)', desc: '' },
+      en: { title: 'Daisugi, the Japanese technique of growing trees out of other trees (2020)', desc: '' },
+      source: 'HN (MaysonL)', time: '16:28', heat: 80,
+      tags: ["model", "product"], url: 'https://www.openculture.com/2020/10/daisugi.html'
+    },
+    {
+      id: 4137,
       zh: { title: 'A way to exclude sensitive files issue still open for OpenAI Codex', desc: '' },
       ja: { title: 'A way to exclude sensitive files issue still open for OpenAI Codex', desc: '' },
       en: { title: 'A way to exclude sensitive files issue still open for OpenAI Codex', desc: '' },
-      source: 'HN (pikseladam)', time: '12:27', heat: 70,
+      source: 'HN (pikseladam)', time: '12:27', heat: 95,
       tags: ["model", "product"], url: 'https://github.com/openai/codex/issues/2847'
     },
     {
-      id: 4427,
-      zh: { title: 'Wayfinder Router: deterministic routing of queries between local and hosted LLM', desc: '' },
-      ja: { title: 'Wayfinder Router: deterministic routing of queries between local and hosted LLM', desc: '' },
-      en: { title: 'Wayfinder Router: deterministic routing of queries between local and hosted LLM', desc: '' },
-      source: 'HN (handfuloflight)', time: '04:31', heat: 93,
-      tags: ["model", "product"], url: 'https://github.com/itsthelore/wayfinder-router'
+      id: 2244,
+      zh: { title: 'Reflections on software engineering in the age of AI', desc: '' },
+      ja: { title: 'Reflections on software engineering in the age of AI', desc: '' },
+      en: { title: 'Reflections on software engineering in the age of AI', desc: '' },
+      source: 'HN (diamondap)', time: '16:17', heat: 81,
+      tags: ["model", "product"], url: 'https://adiamond.me/2026/06/software-engineering-in-the-age-of-ai/'
     },
     {
-      id: 2740,
-      zh: { title: 'The origins of the school system aimed to produce independent, critical thinkers', desc: '' },
-      ja: { title: 'The origins of the school system aimed to produce independent, critical thinkers', desc: '' },
-      en: { title: 'The origins of the school system aimed to produce independent, critical thinkers', desc: '' },
-      source: 'HN (pseudolus)', time: '12:55', heat: 56,
-      tags: ["model", "product"], url: 'https://www.cbc.ca/radio/ideas/humboldt-education-system-bildung-1.7172093'
+      id: 4897,
+      zh: { title: 'Google limits Meta\'s use of its Gemini AI models', desc: '' },
+      ja: { title: 'Google limits Meta\'s use of its Gemini AI models', desc: '' },
+      en: { title: 'Google limits Meta\'s use of its Gemini AI models', desc: '' },
+      source: 'HN (root-parent)', time: '13:30', heat: 95,
+      tags: ["model", "product"], url: 'https://www.cnbc.com/2026/06/28/google-limits-metas-use-of-its-gemini-ai-models-ft-reports.html'
     },
     {
-      id: 3721,
+      id: 1012,
       zh: { title: '[arXiv] Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for', desc: 'Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task plan' },
       ja: { title: '[arXiv] Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for', desc: 'Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task plan' },
       en: { title: '[arXiv] Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for', desc: 'Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task plan' },
-      source: 'arXiv', time: '13:47', heat: 67,
+      source: 'arXiv', time: '19:21', heat: 84,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.27330v1'
     },
     {
-      id: 6568,
+      id: 3513,
       zh: { title: '[arXiv] Bridging Talk and Thought: Understanding Dialogue Dynamics Across Collaborative Problem-Solving Cont', desc: 'We present a conceptual framework for analyzing dialogue in collaborative problem-solving contexts, ' },
       ja: { title: '[arXiv] Bridging Talk and Thought: Understanding Dialogue Dynamics Across Collaborative Problem-Solving Cont', desc: 'We present a conceptual framework for analyzing dialogue in collaborative problem-solving contexts, ' },
       en: { title: '[arXiv] Bridging Talk and Thought: Understanding Dialogue Dynamics Across Collaborative Problem-Solving Cont', desc: 'We present a conceptual framework for analyzing dialogue in collaborative problem-solving contexts, ' },
-      source: 'arXiv', time: '13:47', heat: 78,
+      source: 'arXiv', time: '19:21', heat: 82,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.27233v1'
     },
     {
-      id: 7454,
+      id: 5511,
       zh: { title: '[arXiv] CARVE: Content-Aware Recurrent with Value Efficiency for Chunk-Parallel Linear Attention', desc: 'Recurrent models must forget in order to remember, yet the state of the art decides what to erase wi' },
       ja: { title: '[arXiv] CARVE: Content-Aware Recurrent with Value Efficiency for Chunk-Parallel Linear Attention', desc: 'Recurrent models must forget in order to remember, yet the state of the art decides what to erase wi' },
       en: { title: '[arXiv] CARVE: Content-Aware Recurrent with Value Efficiency for Chunk-Parallel Linear Attention', desc: 'Recurrent models must forget in order to remember, yet the state of the art decides what to erase wi' },
-      source: 'arXiv', time: '13:47', heat: 85,
+      source: 'arXiv', time: '19:21', heat: 74,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.27229v1'
     },
     {
-      id: 7508,
+      id: 9686,
       zh: { title: '[arXiv] Ask, Don\'t Judge: Binary Questions for Interpretable LLM Evaluation and Self-Improvement', desc: 'Evaluating LLM outputs remains a major bottleneck in NLP: human evaluation is expensive and slow, le' },
       ja: { title: '[arXiv] Ask, Don\'t Judge: Binary Questions for Interpretable LLM Evaluation and Self-Improvement', desc: 'Evaluating LLM outputs remains a major bottleneck in NLP: human evaluation is expensive and slow, le' },
       en: { title: '[arXiv] Ask, Don\'t Judge: Binary Questions for Interpretable LLM Evaluation and Self-Improvement', desc: 'Evaluating LLM outputs remains a major bottleneck in NLP: human evaluation is expensive and slow, le' },
-      source: 'arXiv', time: '13:47', heat: 65,
+      source: 'arXiv', time: '19:21', heat: 76,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.27226v1'
     },
     {
-      id: 4523,
+      id: 9846,
       zh: { title: '[arXiv] NuclearQAv2: A Structured Benchmark for Evaluating Domain-Science Competence in Large Language Model', desc: 'Large language models (LLMs) have demonstrated strong performance across a wide range of tasks, but ' },
       ja: { title: '[arXiv] NuclearQAv2: A Structured Benchmark for Evaluating Domain-Science Competence in Large Language Model', desc: 'Large language models (LLMs) have demonstrated strong performance across a wide range of tasks, but ' },
       en: { title: '[arXiv] NuclearQAv2: A Structured Benchmark for Evaluating Domain-Science Competence in Large Language Model', desc: 'Large language models (LLMs) have demonstrated strong performance across a wide range of tasks, but ' },
-      source: 'arXiv', time: '13:47', heat: 77,
+      source: 'arXiv', time: '19:21', heat: 69,
       tags: ["model", "product"], url: 'http://arxiv.org/abs/2606.27047v1'
-    },
-  ]},
-  { day: '2026-06-26', items: [
-    {
-      id: 1885,
-      zh: { title: 'From Hallmark to neon signs: A look at Jim Parkinson\'s career in letter art', desc: '' },
-      ja: { title: 'From Hallmark to neon signs: A look at Jim Parkinson\'s career in letter art', desc: '' },
-      en: { title: 'From Hallmark to neon signs: A look at Jim Parkinson\'s career in letter art', desc: '' },
-      source: 'HN (whiteblossom)', time: '17:32', heat: 58,
-      tags: ["model", "product"], url: 'https://typographica.org/on-typography/jim-parkinson-1941-2025/'
-    },
-  ]},
-  { day: '2026-06-24', items: [
-    {
-      id: 1704,
-      zh: { title: 'AI learns the “dark art” of RFIC design', desc: '' },
-      ja: { title: 'AI learns the “dark art” of RFIC design', desc: '' },
-      en: { title: 'AI learns the “dark art” of RFIC design', desc: '' },
-      source: 'HN (Brajeshwar)', time: '14:02', heat: 95,
-      tags: ["model", "product"], url: 'https://spectrum.ieee.org/ai-radio-chip-design'
     },
   ]},
 ];
